@@ -1,0 +1,31 @@
+[package]
+name = "disaff"
+version = "0.1.0"
+edition = "2021"
+authors = ["FssAy"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+libc = "0.2.116"
+
+[dependencies.lazy_static]
+version = "1.4.0"
+optional = true
+
+[dependencies.winapi]
+version = "0.3.9"
+features = [
+    "winuser",
+    "errhandlingapi",
+    "minwindef",
+    "wincon",
+    "winnt",
+    "libloaderapi",
+    "processthreadsapi",
+    "consoleapi",
+]
+
+[features]
+info_box = ["lazy_static"]
